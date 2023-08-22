@@ -1,6 +1,10 @@
 # Neufi Basic Frontend Challenge
 This is a frontend challenge for you to showcase your development abilities in real-world tasks. We will evaluate your programming ablities as well as familiarities with the stack we use at Neufi: `React.js`, `Next.js`, and `Tailwind CSS`.
 
+## Preview
+
+![Alt text](<Screen Shot 2023-08-23 at 00.54.56.png>)
+
 ## Getting Started
 
 ### Requirements
