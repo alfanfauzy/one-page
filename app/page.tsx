@@ -7,9 +7,9 @@ type SectionRefs = Record<string, React.MutableRefObject<HTMLElement | null>>
 
 const navigation = [
   { name: 'Section 1', href: '#section1' },
-  { name: 'Section 2', href: '#' },
-  { name: 'Section 3', href: '#' },
-  { name: 'Section 4', href: '#' },
+  { name: 'Section 2', href: '#section2' },
+  { name: 'Section 3', href: '#section3' },
+  { name: 'Section 4', href: '#section4' },
 ]
 
 const slidingText = <p className='inline-block text-xl md:text-2xl tracking-widest px-3'>
@@ -42,9 +42,9 @@ export default function Page() {
   return (
     <div className="flex flex-col min-h-full h-screen w-full relative scroll-smooth">
       <header className="fixed top-0 z-50 w-full bg-black border-b-2 border-gray-950">
-      <section className="flex p-4 justify-end lg:hidden">
+        <section className="flex p-4 justify-end block md:hidden lg:hidden">
           <div
-            className={`${isNavOpen && `hidden`} space-y-2 `}
+            className={`${isNavOpen && `hidden`} space-y-2`}
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
             <span className="block h-0.5 w-8 animate-pulse bg-neutral-50"></span>
@@ -86,7 +86,7 @@ export default function Page() {
             </nav>
           </div>
         </section>
-        <nav className="flex flex-row justify-between mx-auto max-w-7xl p-6 lg:px-8 hidden">
+        <nav className=" flex-row justify-between mx-auto max-w-7xl p-6 hidden md:flex lg:flex">
           <div className="" onClick={()=>handleScrollToSection(sectionRef.top, 'top')}>
             <a href="#" className="text-2xl md:text-3xl">
               Challenges
